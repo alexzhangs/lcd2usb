@@ -80,6 +80,10 @@ class LCD(object):
         self.buffer_current_fill = 0  # -"-
         self.buffer = bytearray(self.BUFFER_MAX_CMD)
 
+        # adjust contrast and brightess
+        self.set_contrast(200)
+        self.set_brightness(255)
+
     @classmethod
     def find_or_die(cls):
         try:
